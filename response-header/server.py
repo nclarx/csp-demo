@@ -5,9 +5,12 @@ app = Flask(__name__)
 def hello():
     page = render_template('./index.html')
     response = Response(page)
-    response.headers['Content-Security-Policy'] = "default-src 'self'"
+    response.headers['Content-Security-Policy'] = "default-src 'self';" + \
+            "style-src 'self';" + \
+            "script-src 'self';" + \
+            "img-src 'self;"
     return response
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8200)
+    app.run(host='localhost', port=8200)
 

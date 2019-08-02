@@ -9,9 +9,11 @@
 
     <!-- CONTENT SECURITY POLICY -->
     <meta http-equiv="Content-Security-Policy" content="
-          default-src 'none';
-          style-src 'self' https://stackpath.bootstrapcdn.com 'sha384-yDrF8bIguyohEeae6xX0oNJsVef+iqqMxST825tUu2YCDAtbkx2nOwNOGYDARFY4' 'unsafe-inline';
-          script-src 'none' https://code.jquery.com/ https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com;
+          default-src 'self';
+          style-src 'self' https://stackpath.bootstrapcdn.com 'sha384-cSJ0UBne5Z7TWPAyer9V39SqUWOtEfZOdGxxeIvlvxthDWjcTIkDH+tm+iJZjgNe';
+          script-src https://code.jquery.com/ https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com 'unsafe-inline';
+          img-src 'self'
+          frame-src github.com youtube.com
           ">
     <!-- END CSP -->
 
